@@ -42,7 +42,7 @@ i{
     padding: 10px 10px 10px 0px;
 }
 .search-outer-box{
-    width: 300px;
+    width: 240px;
     margin:auto;
 }
 .search-accordian-tab{
@@ -54,6 +54,9 @@ i{
     align-items: center;
     padding-left: 15px;
     position: relative;
+}
+input[type="radio"]{
+    display: none;
 }
 
 

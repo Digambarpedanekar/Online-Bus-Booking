@@ -13,6 +13,7 @@
             <div class="logo">
                 <img src="logo.jpg" alt="">
             </div>
+            DigambarTravels
             <div class="navbar-user-section">
                 <div class="help">
                     <i class="fa fa-solid fa-headset" style="color:  #15252D;"></i>
@@ -27,22 +28,25 @@
     </nav>
     <main>
         <div class="search-outer-box">
-            <div class="search-outer-accordian">
-                <div class="search-accordian-tab">
+            <div class="search-outer-accordian bus-tab">
+                <div class="search-accordian-tab " >
                     <label for="bus-tab">
                     <i class="fa fa-solid fa-bus" style="color:  #15252D;" ></i>
                     bus booking
                     </label>
-                    <i class="fa fa-solid fa-plus symbol-position" style="color: #15252D;" id="bus-tab"></i>
+                    
+                    <i class="fa fa-solid fa-minus symbol-position" style="color: #15252D;" ></i>
+                    <input type="radio"  id="bus-tab"  checked>
+                    
                 </div>
                 <div class="search-accordian-content display">
                     <form action="">
                         <div>
                         <div class="from alignment">
                             <span><i class="fa fa-solid fa-location-dot" style="color: #f31111;"></i>
-                                <label for="fromCity">from:</label>
+                                <label for="fromCity-bus">from:</label>
                             </span>
-                            <select name="fromcity" id="fromcity">
+                            <select name="fromcity-bus" id="fromCity-bus" class="fromcity">
                                 <option value="satara">satara</option>
                                 <option selected value="pune">pune</option>
                                 <option value="mumbai">mumbai</option>
@@ -73,9 +77,9 @@
                         <div>
                         <div class="to alignment">
                             <span><i class="fa fa-solid fa-location-dot" style="color: #f31111;"></i>
-                            <label for="toCity">to:</label>
+                            <label for="toCity-bus">to:</label>
                             </span>
-                            <select name="tocity" id="tocity">
+                            <select name="tocity-bus" id="toCity-bus" class="tocity">
                                 <option value="satara">satara</option>
                                 <option  value="pune">pune</option>
                                 <option value="mumbai">mumbai</option>
@@ -94,14 +98,14 @@
                         <div>
                         <div class="date-of-travel alignment">
                             <p>onword :</p>
-                            <input type="text" name="travel-date" id="travel-date" value="wed, 19-12-2023" placeholder="wed, 19-12-2023">
+                            <input type="text"  id="travel-date" value="wed, 19-12-2023" placeholder="wed, 19-12-2023">
                             <i class="fa fa-solid fa-calendar-days symbol-position" style="color: #f78812;"></i>
                         </div>
                         </div>
                         <div>
                         <div class="date-of-return-travel alignment">
                             <p>return :</p>
-                            <input type="text" name="travel-date" id="travel-date" value="" placeholder="optional">
+                            <input type="text" name="travel-date" id="travel-date-return" value="" placeholder="optional">
                             <i class="fa fa-solid fa-calendar-days symbol-position" style="color: #f78812;"></i>
                         </div>
                         </div>
@@ -112,23 +116,23 @@
                     </form>
                 </div>
             </div>
-            <div class="search-outer-accordian">
-            <div class="search-accordian-tab">
-                <label for="bus-tab">
+            <div class="search-outer-accordian cargo-tab">
+            <div class="search-accordian-tab ">
+                <label for="cargo-tab">
                     <i class="fa fa-solid fa-truck" style="color: #15252D;"></i>
-                    cargo
+                    cargo                    
                 </label>
-                <i class="fa fa-solid fa-plus symbol-position" style="color: #15252D;" id="cargo-tab"></i>
-                
+                <i class="fa fa-solid fa-plus symbol-position" style="color: #15252D;" ></i>
+                <input type="radio" name="cargo-tab"  id="cargo-tab"  >               
             </div>
             <div class="search-accordian-content">
                 <form action="">
                     <div>
                     <div class="from alignment">
                         <span><i class="fa fa-solid fa-location-dot" style="color: #f31111;"></i>
-                            <label for="fromCity">from:</label>
+                            <label for="fromCity-cargo">from:</label>
                         </span>
-                        <select name="fromcity" id="fromcity">
+                        <select name="fromcity-cargo" id="fromCity-cargo" class="fromcity">
                             <option value="satara">satara</option>
                             <option selected value="pune">pune</option>
                             <option value="mumbai">mumbai</option>
@@ -159,9 +163,9 @@
                     <div>
                     <div class="to alignment">
                         <span><i class="fa fa-solid fa-location-dot" style="color: #f31111;"></i>
-                        <label for="toCity">to:</label>
+                        <label for="toCity-cargo">to:</label>
                         </span>
-                        <select name="tocity" id="tocity">
+                        <select name="tocity-cargo" id="toCity-cargo" class="tocity">
                             <option value="satara">satara</option>
                             <option  value="pune">pune</option>
                             <option value="mumbai">mumbai</option>
@@ -180,7 +184,7 @@
                     <div>
                     <div class="date-of-travel alignment">
                         <p>onword :</p>
-                        <input type="text" name="travel-date" id="travel-date" value="wed, 19-12-2023" placeholder="wed, 19-12-2023">
+                        <input type="text" name="travel-date" id="travel-date-cargo" value="wed, 19-12-2023" placeholder="wed, 19-12-2023">
                         <i class="fa fa-solid fa-calendar-days symbol-position" style="color: #f78812;"></i>
                     </div>
                     </div>
@@ -192,28 +196,29 @@
                 </form>
             </div>
             </div>
-            <div class="search-outer-accordian">
-            <div class="search-accordian-tab">
-                
-                    <i class="fa fa-solid fa-bus" style="color: #15252D;" ></i>
-                    <p>bus hire</p>
-                
-                <i class="fa fa-solid fa-plus symbol-position" style="color: #15252D;" id="bus-hire-tab"></i>
-                
-            </div>
-            <div class="search-accordian-content">
+            <div class="search-outer-accordian bus-hire-tab">
+                <div class="search-accordian-tab " >
+                    <label for="bus-hire-tab">
+                        <i class="fa fa-solid fa-bus" style="color: #15252D;" ></i>
+                        bus hire
+                        
+                    </label>
+                    <i class="fa fa-solid fa-plus symbol-position" style="color: #15252D;" ></i>
+                    <input type="radio"  id="bus-hire-tab"  >
+                </div>
+                <div class="search-accordian-content">
                 <form action="">
                     <div >
                         <div id="input-alignment">
-                            <input type="text" placeholder="City of Hire">
+                            <input type="text" placeholder="City of Hire" name="city-of-hire">
                         </div>
                     </div>
                     <div>
                     <div class="from alignment">
                         <span><i class="fa fa-solid fa-location-dot" style="color: #f31111;"></i>
-                            <label for="fromCity">from:</label>
+                            from:
                         </span>
-                        <input type="text" placeholder="starting point">
+                        <input type="text" placeholder="starting point" id="starting-point" class="fromcity">
                         <!-- <i class="fa fa-solid fa-caret-down symbol-position" style="color: #000000;"></i> -->
                         <div class="swap-city">
                             <svg fill="#fff" version="1.1" width="30" height="25" x="10px" y="10px"
@@ -224,7 +229,6 @@
                             </svg>
                         </div>
                         <div class="connecting-line">
-
                         </div>
                     </div>
                     </div>
@@ -232,9 +236,9 @@
                     <div>
                     <div class="to alignment">
                         <span><i class="fa fa-solid fa-location-dot" style="color: #f31111;"></i>
-                        <label for="toCity">to:</label>
+                        to:
                         </span>
-                        <input type="text" placeholder="destination">
+                        <input type="text" placeholder="destination" id="destination" class="tocity">
                         <!-- <i class="fa fa-solid fa-caret-down symbol-position" style="color: #000000;"></i> -->
                     </div>
                     </div>
@@ -244,11 +248,13 @@
                     </div>
 
                 </form>
-            </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <script src="app.js"></script>
+    <script src="app.js">
+        
+    </script>
 </body>
 </html>
