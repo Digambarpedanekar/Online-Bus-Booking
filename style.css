@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    
+}
+
+/* navbar */
+.navbar{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.logo >img{
+    width: 100px;
+    height: 100px;
+}
+
+.navbar-user-section{
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+}
+
+.navbar-user-section :hover{
+    
+    background-color: rgb(235, 234, 231);
+    cursor: pointer;
+}
+/* end of navbar */
+i{
+    padding: 10px 10px 10px 0px;
+}
+.search-outer-box{
+    width: 300px;
+    margin:auto;
+}
+.search-accordian-tab{
+    background-color: #f3800c;
+    width: 300px;
+    height: 60px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    position: relative;
+}
+
+
+.symbol-position{
+    position: absolute;
+    left:250px;
+}
+
+.search-accordian-content{
+    width: 300px;
+    display: none;
+}
+.display{
+    display:block ;
+}
+form>div{
+    height: 60px;
+    border: 1px solid rgb(66, 65, 65);
+    position: relative;
+    
+}
+
+.date-of-travel{
+    display: flex;
+}
+.swap-city{
+    position: absolute;
+    left: 180px;
+    top: 40px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #15252D;
+}
+.connecting-line{
+    position: absolute;
+    left: 14px;
+    top: 42px;
+    border-left: 2px dashed #afafaf;
+    height: 48px;
+}
+.search-bus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-btn{
+    background-color: #15252D;
+    color: white;
+    width: 150px;
+    height: 40px;
+}
+
+
+.alignment{
+    width: 280px;
+    height: 30px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 70px 1fr 30px;
+    
+}
+.alignment>*{
+    display: flex;
+    align-items: center;
+    
+}
+input,select{
+    border: none;
+}
+#input-alignment {
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
