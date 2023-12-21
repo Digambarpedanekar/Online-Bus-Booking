@@ -9,6 +9,7 @@
 /* navbar */
 .navbar{
     width: 90%;
+    height: 100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -26,16 +27,52 @@
 
 .navbar-user-section{
     display: flex;
-    width: 180px;
-    justify-content: space-between;
+    width: 260px;
+    justify-content: space-around;
     font-size: 20px;
     align-items: center;
 }
 
 .navbar-user-section :hover{
     
-    background-color: rgb(235, 234, 231);
+    background-color: #eee;
     cursor: pointer;
+}
+
+.help{
+    padding: 10px;
+    width: 100px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+.user{
+    padding: 10px;
+    width: 150px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+.user> ul{
+    position: absolute;
+    border: 1px solid red;
+    list-style: none;
+    width: 140px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px 0px;
+    
+}
+
+.user li :hover{
+    background-color: #767373;
+    cursor: pointer;
+}
+.user li a{
+    text-decoration: none;
+    color: rgb(84, 82, 82);
+    display: block;
+    font-size: 15px;
+    padding: 5px;
 }
 /* end of navbar */
 i{
@@ -67,10 +104,10 @@ input[type="radio"]{
 
 .search-accordian-content{
     width: 300px;
-    display: none;
+    display: block;
 }
-.display{
-    display:block ;
+.hide{
+    display:none ;
 }
 form>div{
     height: 60px;
