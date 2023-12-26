@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <style></style>
+    <script src="app.js">    </script>
 </head>
-<body>
+<body >
     <nav>
-        <div class="navbar">
+        <div class="navbar ">
             <div class="logo">
-                <img src="logo.jpg" alt="">
+                <img src="/images/logo.jpg" alt="">
             </div>
             DigambarTravels
             <div class="navbar-user-section">
@@ -29,14 +29,14 @@
                         <li><a href="#">change travel date</a></li>
                         <li><a href="#">show my ticket</a></li>
                         <li><a href="#">email/SMS</a></li>
-                        <li><a href="#">login / signup</a></li>
+                        <li id="open-login-section"><a >login / signup</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
     <main>
-        <div class="search-outer-box">
+        <section class="search-outer-box ">
             <div class="search-outer-accordian bus-tab">
                 <div class="search-accordian-tab " >
                     <label for="bus-tab">
@@ -259,7 +259,37 @@
                 </form>
                 </div>
             </div>
+        </section>
+        <section class="hide " id="login-section">
+            <div class="login">
+            <div class="login-offer ">
+
+            </div>
+            <div class="login-here">
+                <i class="fa fa-solid fa-xmark symbol-position close"></i>
+                <div>
+                    Sign in to avail exciting discounts and cashbacks!!
+                </div>
+                <div class="mobile-no">
+                    +91 <input type="text " id="mobile-no" placeholder="enter your mobile no">
+                </div>
+                <div class="login-btn search-btn">
+                    <button >Generate OTP(One time password)</button>
+                </div>
+                <div>
+                    or sign up with social account
+                </div>
+                    
+                <div >
+                    <div class="login-mail">
+                    <img src="/images/Google__G__logo.svg" alt="">
+                    <p>sign in with gmail</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        </section>
     </main>
 
     <script src="app.js">

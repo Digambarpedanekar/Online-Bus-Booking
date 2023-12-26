@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded',function(){
     let swapCity = document.querySelector('.swap-city');
     swapCity.addEventListener('click',()=>{
         swapCityFunc(busTab);
+
     })
 
     flatpickr('.date-input',{
@@ -40,7 +41,9 @@ document.addEventListener('DOMContentLoaded',function(){
         let toCity = container.querySelector('.tocity')
         let temp =fromCity.value;
         fromCity.value = toCity.value;
-        toCity.value =temp;
+        toCity.value = temp;
+        console.log(temp)
+        console.log('swap')
     }
     function closeTab(tag,tagP){
         tag.previousElementSibling.classList.remove('fa-minus');
@@ -53,6 +56,7 @@ document.addEventListener('DOMContentLoaded',function(){
         tag.previousElementSibling.classList.add('fa-minus');
         tagP.nextElementSibling.classList.remove('hide');
     }
+
 
 
     busTag.addEventListener('click',(e)=>{
@@ -81,7 +85,6 @@ document.addEventListener('DOMContentLoaded',function(){
             openTab(  busHireTag,busHireTagP);
             closeTab(cargoTag,cargoTagP);
             closeTab(busTag,busTagP);
-
         }
         let busHireTab = document.querySelector('.bus-hire-tab');
         let swapCity = busHireTab.querySelector('.swap-city');
@@ -89,16 +92,52 @@ document.addEventListener('DOMContentLoaded',function(){
             swapCityFunc(busHireTab);
         })
     })
-
+    
     let userDropDown =document.querySelector('.user');
     userDropDown.addEventListener('click',(e)=>{
         userDropDown.lastElementChild.classList.remove('hide');
         e.stopPropagation(); //this is used to stop propogation of click event
         document.addEventListener('click',(event)=>{
             if(event.target != userDropDown.lastElementChild){
+                console.log(event.target)
                 userDropDown.lastElementChild.classList.add('hide');
             }
         })
         
+        userDropDown.lastElementChild.addEventListener('click',(e)=>{
+            let openLoginSection = document.getElementById('open-login-section')
+            if(e.target === openLoginSection.firstChild ){
+                document.getElementById('login-section').classList.remove('hide');
+                userDropDown.lastElementChild.classList.add('hide');
+                document.getElementsByClassName('navbar')[0].classList.add('disabled-events');
+                document.querySelector('.search-outer-box').classList.add('disabled-events');
+                console.log('change')
+            }
+        })
+        
     })
+    let close = document.querySelector('.close')
+    close.addEventListener('click',(e)=>{
+        document.getElementsByClassName('navbar')[0].classList.remove('disabled-events');
+        document.querySelector('.search-outer-box').classList.remove('disabled-events');
+        document.getElementById('login-section').classList.add('hide');
+    })
+
+    loginBtn=document.querySelector('.login-btn');
+    console.log(loginBtn);
+    async ()=>{
+        loginBtn.addEventListener('click',()=>{
+            let mobileNo = document.getElementById('mobile-no');
+            const response =fetch('/send_otp',{
+                method: 'POST',
+                headers : {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({mobileNo})
+            });
+            const result = response.JSON();
+            console.log(result);
+        })
+    
+    }
 });

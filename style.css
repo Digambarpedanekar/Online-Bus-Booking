@@ -5,6 +5,9 @@
     text-transform: capitalize;
     
 }
+*:focus {
+    outline: none;
+}
 
 /* navbar */
 .navbar{
@@ -172,3 +175,77 @@ input,select{
     align-items: center;
     justify-content: center;
 }
+
+.disabled-events{
+    background-color: #fbf9f7;
+    opacity: 0.1;
+    pointer-events: none;
+    
+}
+/* login */
+.login{
+    z-index: 5;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    border: 2px solid green;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    background-color: white;
+    
+}
+.login-offer{
+    width: 250px;
+    height: 100%;
+    background-color: #f3800c;
+}
+.login-here{
+    width: 350px;
+    height: 100%;
+    position:relative;
+
+}
+.login-here >div{
+    width: 250px;
+    
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+#mobile-no{
+    padding: 10px;
+}
+.login-btn{
+    background-color: #f3800c;
+}
+.login-btn button{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.mobile-no{
+    border: 1px solid gray;
+}
+.login-mail{
+    width: 180px;
+    display: flex;
+    border: 2px solid rgb(43, 43, 211);
+    border-radius: 5px;
+    padding:  5px 5px 5px 5px;
+    justify-content: space-between;
+    background-color:rgb(43, 43, 211) ;
+    color: white;
+    align-items: center;
+    
+}
+.login-mail >img{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+/* end of login */
